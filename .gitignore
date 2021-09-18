@@ -23,4 +23,7 @@
 hs_err_pid*
 
 
-.idea/*
+/multithreading/.idea/*
+/multithreading/.gradle/*
+/multithreading/build/*
+/multithreading/gradle/*
