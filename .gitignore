@@ -28,3 +28,5 @@ hs_err_pid*
 /multithreading/build/*
 /multithreading/gradle/*
 *.gradle
+/multithreading/gradlew
+/multithreading/gradlew.bat
