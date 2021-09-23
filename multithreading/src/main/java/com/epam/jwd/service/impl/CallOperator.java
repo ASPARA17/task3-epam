@@ -1,12 +1,13 @@
-package com.epam.jwd.entity;
+package com.epam.jwd.service.impl;
 
+import com.epam.jwd.entity.Operator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class CallOperator extends Operator{
+public class CallOperator extends Operator {
     private static final Logger logger = LogManager.getLogger(CallOperator.class);
     private static final String ERROR_MESSAGE = "Error";
     private int operatorId;
