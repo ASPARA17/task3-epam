@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class CallOperator extends Operator {
     private static final Logger logger = LogManager.getLogger(CallOperator.class);
-    private static final String ERROR_MESSAGE = "Error";
+    private static final String SERVICE_CLIENT = "Service client";
     private int operatorId;
 
     public CallOperator(int id) {
@@ -27,10 +27,20 @@ public class CallOperator extends Operator {
     @Override
     public void service() {
         try {
-            // service client
+            logger.debug(SERVICE_CLIENT);
             TimeUnit.MILLISECONDS.sleep(new Random().nextInt(500));
         } catch (InterruptedException e) {
-            logger.error(ERROR_MESSAGE + e);
+            Thread.currentThread().interrupt();
+            logger.error(e);
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("CallOperator{");
+        sb.append("id=").append(operatorId);
+        sb.append(", busy=").append(isBusy()).append('}');
+        return sb.toString();
+    }
+
 }
