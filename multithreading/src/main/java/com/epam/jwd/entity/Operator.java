@@ -1,6 +1,6 @@
 package com.epam.jwd.entity;
 
-public abstract class Operator {
+public abstract class Operator{
     private volatile boolean busy;
 
     public boolean isBusy() {
